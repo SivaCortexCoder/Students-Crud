@@ -27,7 +27,7 @@ const StudentContext = ({ children }) => {
     const selectedStudentId = selectedUser._id;
 
     return axios
-      .put(`http://localhost:3000/${selectedStudentId}`, student)
+      .put(`https://students-crud-lozx.onrender.com/${selectedStudentId}`, student)
       .then((res) => {
         console.log(res.data.message);
 
