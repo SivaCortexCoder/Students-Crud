@@ -1,10 +1,15 @@
 import React, { useContext } from "react";
 import { studentContextApi } from "../context/StudentContext";
 import { useNavigate } from "react-router-dom";
+import Loader from "./Loader";
 
-const Table = ({ studentsData, deleteStudent }) => {
+const Table = ({ studentsData, deleteStudent,isloading }) => {
   const { handleEdit } = useContext(studentContextApi)
   const navigate = useNavigate()
+
+  if(isloading){
+    return <Loader/>;
+  }
 
   if (!studentsData || studentsData.length === 0) {
     return (

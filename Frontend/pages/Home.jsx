@@ -7,13 +7,18 @@ import { studentContextApi } from '../src/context/StudentContext'
 const Home = () => {
   const { studentsData, setStudentsData } = useContext(studentContextApi)
   const navigate = useNavigate()
+  const[isloading,setIsLoading] = useState(false)
 
   useEffect(() => {
+    setIsLoading(true)
     axios.get('https://students-crud-lozx.onrender.com/students')
       .then((res) => {
         setStudentsData(res.data)
       })
       .catch((err) => console.log(err))
+      .finally(()=>{
+        setIsLoading(false)
+      })
   }, [])
 
   const deleteStudent = (index) => {
@@ -53,7 +58,7 @@ const Home = () => {
 
         {/* Table Section */}
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-          <Table studentsData={studentsData} deleteStudent={deleteStudent} />
+          <Table studentsData={studentsData} deleteStudent={deleteStudent} isloading={isloading} />
         </div>
       </div>
     </div>
