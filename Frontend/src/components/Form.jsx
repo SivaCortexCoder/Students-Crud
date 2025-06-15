@@ -20,7 +20,6 @@ const Form = () => {
     }));
   };
   
-  console.log(student);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

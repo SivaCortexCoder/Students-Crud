@@ -62,7 +62,7 @@ const StudentContext = ({ children }) => {
     }
   };
 
-  console.log(editingIndex);
+
 
   return (
     <studentContextApi.Provider
