@@ -9,7 +9,7 @@ const Home = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    axios.get('http://localhost:3000/students')
+    axios.get('https://students-crud-lozx.onrender.com/students')
       .then((res) => {
         setStudentsData(res.data)
       })
@@ -20,7 +20,7 @@ const Home = () => {
     const selectedStudent = studentsData[index]
     const selectedStudentId = selectedStudent._id
 
-    axios.delete(`http://localhost:3000/${selectedStudentId}`)
+    axios.delete(`https://students-crud-lozx.onrender.com/${selectedStudentId}`)
       .then((res) => {
         console.log(res.data.message);
         const newList = [...studentsData];

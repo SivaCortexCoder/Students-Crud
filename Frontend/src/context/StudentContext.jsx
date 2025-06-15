@@ -49,7 +49,7 @@ const StudentContext = ({ children }) => {
 
   const addStudent = async () => {
     try {
-      const res = await axios.post("http://localhost:3000/students", student);
+      const res = await axios.post("https://students-crud-lozx.onrender.com/students", student);
       console.log(res.data);
 
       setStudentsData((prev) => [...prev, res.data]);
