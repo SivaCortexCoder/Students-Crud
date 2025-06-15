@@ -29,7 +29,7 @@ const StudentContext = ({ children }) => {
     return axios
       .put(`https://students-crud-lozx.onrender.com/${selectedStudentId}`, student)
       .then((res) => {
-        console.log(res.data.message);
+        // console.log(res.data.message);
 
         // const newList = [...studentsData];
         // newList[editingIndex] = { ...student, _id: selectedStudentId };
@@ -42,7 +42,7 @@ const StudentContext = ({ children }) => {
         return res;
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
         throw err;
       });
   };
@@ -57,7 +57,7 @@ const StudentContext = ({ children }) => {
       setStudent({ name: "", age: "", email: "" });
       return res;
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       throw err;
     }
   };
