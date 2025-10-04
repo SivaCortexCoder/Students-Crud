@@ -27,7 +27,7 @@ const Entry = () => {
                          transition-all duration-300 transform hover:scale-[1.02] 
                          focus:outline-none focus:ring-4 focus:ring-red-200 cursor-pointer"
             >
-              View Students
+              View All records
             </button>
             <button 
               onClick={() => navigate('/create')}
