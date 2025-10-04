@@ -35,7 +35,7 @@ const Entry = () => {
                          hover:bg-indigo-600 transition-all duration-300 transform hover:scale-[1.02] 
                          focus:outline-none focus:ring-4 focus:ring-indigo-200 shadow-lg cursor-pointer"
             >
-              Add Students
+              Add Records of student
             </button>
           </div>
         </div>
