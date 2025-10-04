@@ -7,7 +7,7 @@ const Entry = () => {
   return (
     <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-r from-blue-200 to-cyan-200">
       <div className="w-full max-w-xl">
-        <div className="bg-white shadow-xl rounded-2xl p-6 sm:p-8 md:p-10">
+        <div className="bg-white shadow-xl rounded-2xl p-6 sm:p-8 md:p-10 "  data-aos="fade-right">
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -35,7 +35,7 @@ const Entry = () => {
                          hover:bg-indigo-600 transition-all duration-300 transform hover:scale-[1.02] 
                          focus:outline-none focus:ring-4 focus:ring-indigo-200 shadow-lg cursor-pointer"
             >
-              Add Students
+              Add Record
             </button>
           </div>
         </div>
